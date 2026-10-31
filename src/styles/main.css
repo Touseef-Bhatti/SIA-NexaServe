@@ -304,11 +304,28 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .page-hero--image .breadcrumbs a:hover { color: #fff; text-decoration: underline; }
 .page-hero--image .eyebrow { color: #c9e0d3; }
 
-.consultancy-gallery { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 30px 0 38px; }
+.consultancy-focus { background: linear-gradient(180deg, var(--surface) 0%, var(--paper) 52%); }
+.consultancy-focus-intro { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); align-items: end; gap: clamp(36px, 7vw, 100px); }
+.consultancy-focus-intro h2 { max-width: 760px; margin: 15px 0 17px; font: 600 clamp(2.45rem, 5vw, 4.2rem)/1.07 var(--font-display); letter-spacing: -.055em; }
+.consultancy-focus-lead { max-width: 620px; margin: 0; color: var(--ink-soft); font-size: clamp(1.08rem, 1.5vw, 1.22rem); line-height: 1.55; }
+.consultancy-focus-context { padding-left: 27px; border-left: 2px solid #abcbbb; }
+.consultancy-focus-context p { margin: 0 0 20px; color: var(--muted); }
+.consultancy-arrangements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 42px; }
+.consultancy-arrangement { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: 0 12px 34px rgba(22, 41, 39, .045); }
+.consultancy-arrangement img { width: 100%; height: 170px; object-fit: cover; }
+.consultancy-arrangement-body { padding: 24px 25px 29px; }
+.consultancy-arrangement-number { color: var(--green); font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.consultancy-arrangement h3 { margin: 12px 0 9px; font: 700 1.43rem/1.2 var(--font-display); letter-spacing: -.035em; }
+.consultancy-arrangement p { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.55; }
+.consultancy-services-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-top: 86px; padding-top: 34px; border-top: 1px solid var(--line); }
+.consultancy-services-heading h3 { margin: 12px 0 0; font: 600 clamp(1.85rem, 3.3vw, 2.8rem)/1.12 var(--font-display); letter-spacing: -.045em; }
+.consultancy-services-heading p { max-width: 330px; margin: 0 0 3px; color: var(--muted); }
+.consultancy-gallery { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin: 30px 0 0; }
 .image-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 4px 15px rgba(22,41,39,.04); transition: transform .2s ease, box-shadow .2s ease; }
 .image-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.consultancy-focus .image-card { color: var(--ink); }
 .content-main a.image-card:not(.button):not(.text-link) { color: var(--ink); text-decoration: none; }
-.image-card img { width: 100%; height: 178px; object-fit: cover; }
+.image-card img { width: 100%; height: 195px; object-fit: cover; }
 .image-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 20px; }
 .image-card-index { color: var(--green); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
 .image-card strong { margin-top: 13px; font: 700 1.2rem/1.25 var(--font-display); letter-spacing: -.025em; }
@@ -349,11 +366,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .sector-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .consultancy-focus-intro { grid-template-columns: 1fr; gap: 26px; }
+  .consultancy-focus-context { max-width: 680px; }
+  .consultancy-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 650px) {
   .page-hero--image { min-height: 430px; padding-block: 56px; }
   .page-hero--image::before { background: linear-gradient(90deg, rgba(10,30,26,.91), rgba(10,30,26,.59)); }
   .consultancy-gallery, .sector-gallery, .service-detail { grid-template-columns: 1fr; }
+  .consultancy-arrangements { grid-template-columns: 1fr; }
+  .consultancy-arrangement img { height: 205px; }
+  .consultancy-services-heading { align-items: flex-start; flex-direction: column; gap: 14px; margin-top: 62px; }
   .sector-gallery-card img { height: 220px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
